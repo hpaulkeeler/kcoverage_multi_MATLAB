@@ -29,13 +29,13 @@ Jn=zeros(size(Tn));
 if n==3
     for k=1:length(Tn)
         fv=@(v1,v2)(1./((v1.*v2)+Tn(k))).*(1./((v1.*(1-v2))+Tn(k))).*(v1.*v2.*(1-v2).*(1-v1)).^(2/betaConst).*v1.^(2/betaConst+1);
-        Jn(k)=dblquad(fv,0,1,0,1); %perform double qudarature
+        Jn(k)=integral2(fv,0,1,0,1); %perform double qudarature
     end
 elseif n==2
     for k=1:length(Tn)
         
         fv=@(v1)(v1.*(1-v1)).^(2/betaConst)./(v1+Tn(k));
-        Jn(k)=quad(fv,0,1); %perform single qudarature
+        Jn(k)=integral(fv,0,1); %perform single qudarature
     end
 elseif n==1
     Jn=ones(size(Tn)); %return ones since J_1=1;

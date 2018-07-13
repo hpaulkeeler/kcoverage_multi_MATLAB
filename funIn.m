@@ -38,7 +38,7 @@ else
     %latest quadrature of (12) in [1] after change of variable
     %u=t./(1-t); change of variable
     ft=@(t)t.^(2*n-1).*(1./(1-t)).^(2*n+1).*exp(-(t./(1-t)).^2-(t./(1-t)).^(betaConst).*x.*((gamma(1-2./betaConst)).^(-betaConst/2)));
-    In=2^n./betaConst.^(n-1).*quadgk(ft,0,1)./C.^n/factorial(n-1);      
+    In=2^n./betaConst.^(n-1).*integral(ft,0,1)./C.^n/factorial(n-1);      
     
 end
 

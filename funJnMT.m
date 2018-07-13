@@ -39,11 +39,11 @@ if n==3
     fv=@(v1,v2)(1./((v1.*v2)+Tn(1))).*(1./((v1.*(1-v2))+Tn(2))).*(v1.*v2.*(1-v2).*(1-v1)).^(2/betaConst).*v1.^(2/betaConst+1)...
         +(1./((v1.*v2)+Tn(1))).*(1./((v1.*(1-v2))+Tn(3))).*(v1.*v2.*(1-v2).*(1-v1)).^(2/betaConst).*v1.^(2/betaConst+1)...
         +(1./((v1.*v2)+Tn(2))).*(1./((v1.*(1-v2))+Tn(3))).*(v1.*v2.*(1-v2).*(1-v1)).^(2/betaConst).*v1.^(2/betaConst+1);
-    Jn=dblquad(fv,0,1,0,1); %perform double qudarature
+    Jn=integral2(fv,0,1,0,1); %perform double qudarature
 elseif n==2
     fv=@(v1)(v1.*(1-v1)).^(2/betaConst)./(v1+Tn(1))...
         +(v1.*(1-v1)).^(2/betaConst)./(v1+Tn(2));
-    Jn=quad(fv,0,1); %perform single qudarature
+    Jn=integral(fv,0,1); %perform single qudarature
 elseif n==1
     Jn=1; %return a one since J_1=1;
 else
