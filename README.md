@@ -1,6 +1,6 @@
 # kcoverage_multi_MATLAB
 
-If you use this code for published work, please cite paper[2] listed below.
+If you use this code in published work, please cite paper[2] as listed below.
 
 The signal-to-interference-plus-noise ratio or SINR is considered a key performance metric in wireless communications based on information theoretic arguments. These Matlab scripts calculate (via integration or simulation) the SINR-based k-coverage probability of a typical user (or UE) in a multi-tier network with constant base station density (for each tier) and a common path-loss exponent based on Poisson network models outlined in [1] (single-tier) and [2] (multi-tier). The results hold for the whole SINR domain ie when the SINR threshold tau>0, and not just tau>1, and for arbitrary fading/shadowing or "propagation effects".
 
