@@ -29,6 +29,9 @@
 % heterogeneous networks', presented at WDN-CN, 2013
 % [4] Dhillon, Ganti, Adnrews, Baccelli, 'Modeling and analysis of K-tier
 % downlink heterogeneous cellular networks', JSAC, 2012
+%
+% NOTE: If you use this code in published work, please cite paper[2] by
+% Błaszczyszyn and Keeler, as listed above.
 
                      
 function simPCovMT=funSimProbCovMT(tValues,k,betaConst,KValues,lambdaValues,ESTwoBetaValues,W,gammaConst,simNumb,diskRadius)

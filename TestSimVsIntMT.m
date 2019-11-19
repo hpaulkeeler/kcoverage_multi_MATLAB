@@ -14,6 +14,9 @@
 % [2] B. Błaszczyszyn  and H.P. Keeler, 'Studying the SINR process in
 % Poisson networks by using its factorial moment measures', IEEE TOIT,
 % 2015
+%
+% NOTE: If you use this code in published work, please cite paper[2] by
+% Błaszczyszyn and Keeler, as listed above.
 
 
 clear all; close all; clc;
