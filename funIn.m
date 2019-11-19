@@ -18,18 +18,20 @@
 % Author: H.P. Keeler, Inria Paris/ENS, 2014
 %
 % References:
-% [1] H.P. Keeler, B. Błaszczyszyn and M. Karray,
+% [1] H.P. Keeler, B. Blaszczyszyn and M. Karray,
 % 'SINR-based coverage probability in cellular networks with arbitrary
 % shadowing', ISIT, 2013
 %
 % NOTE: If you use this code in published work, please cite paper[1] by
-% Keeler, Błaszczyszyn and Karray, as listed above.
+% Keeler, Blaszczyszyn and Karray, as listed above.
 
 
 
 function In=funIn(betaConst,n,x)
-% Calculates I_n with numerical integration or analytic solution (if x=0 (ie W=0))
-% x <>0 uses quadgk (which can handle singularities)
+% Calculates I_n with numerical integration or analytic solution (if x=0 
+% (ie W=0))x <>0 uses integral (which can handle singularities). An older 
+% version of the code used the integration function quadgk.
+% https://mathworks.com/help/matlab/ref/integral.html
 % x=0 uses analytic solution
 
 C=gamma(1+2./betaConst).*gamma(1-2./betaConst); %constant C';eq. (13) in [1] 
